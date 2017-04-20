@@ -12,9 +12,10 @@ import image_detection as detector
 
 batch_size = 128
 num_classes = 26
-epochs = 25
+epochs = 20
 img_rows, img_cols = 20, 20
 
+print('Start loading data.')
 files, labels = helpers.load_chars74k_data()
 X, y = helpers.create_dataset(files, labels)
 print('Data has been loaded.')
@@ -43,8 +44,7 @@ print(x_test.shape[0], 'test samples')
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
-print('Start training model.')
-
+print('Start training the model.')
 model = Sequential()
 
 model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))
@@ -73,7 +73,6 @@ model.fit(x_train, y_train,
           validation_data=(x_test, y_test))
 
 score = model.evaluate(x_test, y_test, verbose=0)
-
 print('Model has been trained.')
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
