@@ -1,8 +1,9 @@
-import numpy as np
 import PIL
+import numpy as np
 from PIL import Image
 
 
+# Creates the sliding window
 def sliding_window(path):
     from itertools import islice
 
@@ -19,6 +20,7 @@ def sliding_window(path):
 
     slides = []
 
+    # Removes images that only have white pixels.
     for w in window(img_arr, 400):
         count_white = w.count(255)
         if count_white < 400:
@@ -27,8 +29,4 @@ def sliding_window(path):
     slide_array = np.array(slides)
 
     return slide_array
-    #images = slide_array.reshape(slide_array.shape[0], 20, 20, 1)
-    #images = images.astype('float32')
-
-    #return images
 
