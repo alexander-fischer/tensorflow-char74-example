@@ -4,7 +4,7 @@ For running the code base you need Python3. The packages you need to run the cod
 
 - Tensorflow (https://www.tensorflow.org/install/)
 - Keras (https://keras.io/#installation)
-- Scikit-learn
+- scikit-learn
 - pillow
 - OpenCV
 - Numpy
