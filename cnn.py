@@ -5,7 +5,6 @@ from keras import backend as K
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Dense, Dropout, Flatten
 from keras.models import Sequential
-
 from sklearn.model_selection import train_test_split
 
 import helpers
@@ -96,6 +95,7 @@ for pred in predictions1:
             value_list1.append(helpers.num_to_char(i))
 
         i += 1
+
 
 print('Predicted values on', detection1, Counter(value_list1))
 
