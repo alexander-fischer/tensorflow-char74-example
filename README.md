@@ -8,3 +8,9 @@ For running the code base you need Python3. The packages you need to run the cod
 - pillow
 - OpenCV
 - Numpy
+
+For running the code, just use the commands:
+
+`python3 cnn.py`
+
+`python3 randomforest.py`
