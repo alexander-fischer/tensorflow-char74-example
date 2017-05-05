@@ -1,4 +1,4 @@
-# assignment-5
+# Tensorflow Char74 Example
 
 For running the code base you need Python3. The packages you need to run the code are:
 
